@@ -119,7 +119,7 @@ int main()
     for(int i=0; i<100; i++)
         {
             auto start = std::chrono::high_resolution_clock::now();
-            sort(arr1[i], SIZE_1-1);
+            quickSort(arr1[i], 0, SIZE_1-1);
             auto finish = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double> elapsed = finish - start;
             T1[i] = elapsed.count();
@@ -127,28 +127,28 @@ int main()
 
 
             start = std::chrono::high_resolution_clock::now();
-            sort(arr2[i], SIZE_2-1);
+            quickSort(arr2[i], 0, SIZE_2-1);
             finish = std::chrono::high_resolution_clock::now();
             elapsed = finish - start;
             T2[i] = elapsed.count();
 
 
             start = std::chrono::high_resolution_clock::now();
-            sort(arr3[i], SIZE_3-1);
+            quickSort(arr3[i], 0, SIZE_3-1);
             finish = std::chrono::high_resolution_clock::now();
             elapsed = finish - start;
             T3[i] = elapsed.count();
             
 
             start = std::chrono::high_resolution_clock::now();
-            sort(arr4[i], SIZE_4-1);
+            quickSort(arr4[i], 0, SIZE_4-1);
             finish = std::chrono::high_resolution_clock::now();
             elapsed = finish - start;
             T4[i] = elapsed.count();
 
 
             start = std::chrono::high_resolution_clock::now();
-            sort(arr5[i], SIZE_5-1);
+            quickSort(arr5[i], 0, SIZE_5-1);
             finish = std::chrono::high_resolution_clock::now();
             elapsed = finish - start;
             T5[i] = elapsed.count();
@@ -158,49 +158,49 @@ int main()
     switch (option)
     {
     case 1:
-        outdata.open("introsortA.txt");
+        outdata.open("quicksortA.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 2:
-        outdata.open("introsortB.txt");
+        outdata.open("quicksortB.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 3:
-        outdata.open("introsortC.txt");
+        outdata.open("quicksortC.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 4:
-        outdata.open("introsortD.txt");
+        outdata.open("quicksortD.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 5:
-        outdata.open("introsortE.txt");
+        outdata.open("quicksortE.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 6:
-        outdata.open("introsortF.txt");
+        outdata.open("quicksortF.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 7:
-        outdata.open("introsortG.txt");
+        outdata.open("quicksortG.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();
         break;
     case 8:
-        outdata.open("introsortH.txt");
+        outdata.open("quicksortH.txt");
         for(int i{0}; i<100; i++)
         {outdata<<T1[i]<<'\t'<<T2[i]<<'\t'<<T3[i]<<'\t'<<T4[i]<<'\t'<<T5[i]<<std::endl;}
         outdata.close();

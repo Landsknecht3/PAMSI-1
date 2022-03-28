@@ -7,11 +7,12 @@
 #define SIZE_4 500000
 #define SIZE_5 1000000
 
-
+// WEJSCIE: tablica, indeks pierwszego elementu pierwszego podzbioru, indeks ostatniego elementu pierwszego podzbioru, indeks ostatniego elementu drugiego podzbioru
+// WYJSCIE: Scalone podzbiory w jeden posortowany rosnaco zbior
 template <typename T>
 void merge(T arr[], int begin, int mid, int end)
 {
-    int i {begin}, j {mid+1}, k {0};
+    int i {begin}, j {mid+1}, k {0}; /* wskazniki: do pierwszego podzbioru, drugiego oraz do tymczasowej tablicy*/
     T arr_temp[end-begin+1];
 
 
@@ -38,6 +39,8 @@ void merge(T arr[], int begin, int mid, int end)
     }
 }
 
+// WEJSCIE: tablica, indeks pierwszego elementu, indeks ostatniego elementu
+// WYJSCIE: posortowana tablica
 template <typename T>
 void mergeSort(T arr[], int begin, int end)
 {
@@ -49,6 +52,8 @@ void mergeSort(T arr[], int begin, int end)
     merge(arr, begin, mid, end);
 }
 
+// WEJSCIE: tablica, indeks pierwszego elementu pierwszego podzbioru, indeks ostatniego elementu pierwszego podzbioru, indeks ostatniego elementu drugiego podzbioru
+// WYJSCIE: Scalone podzbiory w jeden posortowany malejaco zbior
 template <typename T>
 void mergeDOWN(T arr[], int begin, int mid, int end)
 {
